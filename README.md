@@ -12,4 +12,7 @@ In the .dat file, you can find the data of the teams participating in the UEFA C
 *I suggest to open the files with IBM CPLEX Optimization Studio*
 
 These files are part of my Master's thesis. 
-I will share an abstract of my paper as soon as possible, including an explanation of the mathematical model coded in OPL within the .mod file
+
+In the .pdf file, you can find an ABSTRACT with the mathematical model (codified, then, in OPL - .mod file).
+
+
