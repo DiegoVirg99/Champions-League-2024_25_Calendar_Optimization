@@ -1,0 +1,79 @@
+
+/*********************************************
+ * OPL 22.1.1.0 Data
+ * Author: virgili_d
+ * Creation Date: 9 mag 2024 at 19:31:37
+ *********************************************/
+//inizializzo numero di squadre
+ n = 36;
+ 
+//inizializzo turni
+ d = 8;
+ 
+ //inizializzo l'insieme delle fasce (= 4)
+ ranking_names = {"Prima", "Seconda", "Terza", "Quarta"};
+ 
+ //inizializzo l'insieme delle nazionalità
+ country_names= {"Inghilterra", "Spagna", "Francia", "Germania", "Italia",
+"Portogallo", "Olanda", "Austria", "Turchia", "Ucraina", "Scozia", "Belgio", "Danimarca", "Serbia", "Svizzera", "Rep. Ceca", "Slovacchia", "Croazia"};
+ 
+ //inizializzo nomi squadre (2023/24 + 4 squadre casuali)
+names = ["Inter", "Real Madrid", "PSG", "B. Leverkusen", "PSV", "Feyenoord", "Arsenal", "Manchester City", "Liverpool", "Milan", "Barcellona", "Girona", "Bayern Monaco", "Stoccarda", "Lipsia", "B. Dortmund", "Sporting", "Bologna", "Juventus", "Monaco", "Aston Villa", "Atletico Madrid", "Celtic", "Atalanta", "Brest", "Benfica", "Sturm Graz", "Club Brugge", "Shaktar", "Young Boys", "Sparta Braga", "Salisburgo", "Dinamo Zagabria", "Stella Rossa", "Slovan Bratislava", "Lilla"];
+
+ //inizializzo città
+city = ["Milano", "Madrid", "Parigi", "Leverkusen", "Eindhoven", "Rotterdam", "Londra", "Manchester", "Liverpool", "Milano", "Barcellona", "Girona", "Monaco di B.", "Stoccarda", "Lipsia", "Dortmund", "Lisbona", "Bologna", "Torino", "Monaco", "Birmingham", "Madrid", "Glasgow", "Bergamo", "Brest", "Lisbona", "Graz", "Brugge", "Amburgo", "Berna", "Praga", "Salisburgo", "Zagabria", "Belgrado", "Bratislava", "Lilla"];
+
+//inizializzo nazioni
+country = ["Italia", "Spagna", "Francia", "Germania", "Olanda", "Olanda", "Inghilterra", "Inghilterra", "Inghilterra", "Italia", "Spagna", "Spagna", "Germania", "Germania", "Germania", "Germania", "Portogallo", "Italia", "Italia", "Francia", "Inghilterra", "Spagna", "Scozia", "Italia", "Francia", "Portogallo", "Austria", "Belgio", "Ucraina", "Svizzera", "Rep. Ceca", "Austria", "Croazia", "Serbia", "Slovacchia", "Francia"];
+
+//inizializzo fasce
+ranking = ["Prima", "Prima", "Prima", "Seconda", "Terza", "Terza", "Seconda", "Prima", "Prima", "Seconda", "Prima", "Quarta", "Prima", "Quarta", "Prima", "Prima", "Terza", "Quarta", "Seconda", "Quarta", "Quarta", "Seconda", "Terza", "Seconda", "Quarta", "Seconda", "Quarta", "Seconda", "Seconda", "Terza", "Quarta", "Terza", "Terza", "Terza", "Quarta", "Terza"];
+
+ //inizializzo latitudine e longitudine
+ latitudine = [45.46, 40.42, 41.15, 51.03, 51.44, 51.92, 51.49, 53.48, 53.41, 45.46, 41.38, 41.98, 48.14, 48.78, 51.34, 51.51, 38.71, 44.49, 45.07, 43.73, 52.48, 40.42, 55.86, 45.76, 48.39, 38.71, 47.05, 51.21, 53.55, 46.95, 50.09, 47.80, 45.82, 44.79, 48.15, 50.63
+];
+ longitudine = [9.19, -3.70, -8.61, 6.99, 5.48, 4.48, -0.14, -2.25, -2.99, 9.19, 2.18, 2.82, 11.58, 9.18, 12.37, 7.47, -9.14, 11.34, 7.68, 7.43, -1.90, -3.70, -4.25, 9.75, -4.49, -9.14, 15.48, 3.23, 10.00, 7.45, 14.42, 13.05, 15.98, 20.45, 17.11, 3.06
+];
+ 
+ //inizializzo popolarità
+ b = [1,1,1,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+//inizializzo indisponibilità
+ u = [
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,1,0,0]
+[0,0,0,1,0,0,0,0]
+[0,0,1,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,1,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,1,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,1,0,0,0,0,0,0]
+[0,1,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,1,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[1,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[1,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,1,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,1,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,1,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,1,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,1,0,0,0,0]
+[0,0,0,1,0,0,0,0]
+[0,0,0,0,1,0,0,0]
+[0,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+[1,0,0,0,0,0,0,0]
+[0,0,0,0,0,0,0,0]
+];
