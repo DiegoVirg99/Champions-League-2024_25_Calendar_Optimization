@@ -5,7 +5,9 @@ In the .mod file, you can find the mathematical model with:
 - hard constraints;
 - soft constraints;
 - objective function.
+
 In the .dat file, you can find the data of the teams participating in the UEFA CL 2024/25, necessary to launch the corresponding optimization instance (in OPL).
+
 *I suggest to open the files with IBM CPLEX Optimization Studio*
 
 This files are part of my Master's Thesis. 
