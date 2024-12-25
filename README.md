@@ -1,7 +1,7 @@
 In this repository, I created a mathematical model (.mod) for the optimization of the UEFA Champions League 2024_25 draw and schedule.
 The model was created using integer linear programming and subsequently coded in OPL (IBM CPLEX Optimization Studio) - Operational Research.
 
-In the .mod file, you can find the mathematical model with:
+In the .mod file, you can find the mathematical model (in OPL - to be opened with CPLEX) with:
 - variables definition;
 - hard constraints;
 - soft constraints;
